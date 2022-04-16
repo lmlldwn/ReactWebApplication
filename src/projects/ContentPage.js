@@ -1,6 +1,6 @@
 import React from "react";
 
-function Contents() {
+function ContentPage() {
     return(
         <div className="contents">
             <h1>Contents</h1>
@@ -9,4 +9,4 @@ function Contents() {
     )
 }
 
-export default Contents;
+export default ContentPage;
