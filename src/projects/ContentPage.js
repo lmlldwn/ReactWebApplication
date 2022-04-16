@@ -1,6 +1,6 @@
 import React from "react";
 
-function ShowContents() {
+function Contents() {
     return(
         <div className="contents">
             <h1>Contents</h1>
@@ -9,4 +9,4 @@ function ShowContents() {
     )
 }
 
-export default ShowContents;
+export default Contents;

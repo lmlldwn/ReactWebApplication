@@ -35,20 +35,19 @@ img {
     float: left;
     position: relative;
     top: 15px;
+    left: 5px;
 }
 
 .navigation-labels {
-    background-color: aliceblue;
-    text-decoration-line: underline;
     display: inline;
-
     position: relative;
     top: 20px;
+    left: 10px;
 }
 
 .nav-home, .nav-contents, .nav-about {
+    text-decoration-line: underline;
     font-size: 24px;
-    
 }
 
 
