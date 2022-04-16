@@ -1,0 +1,54 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    background-color: #2d55da;
+    height: 100vh;
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square {
+    background-color: bisque;
+    height: 100px;
+    width: 100px;
+}
+
+.navigation-bar {
+    background-color: antiquewhite;
+    height: 80px;
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+    max-height: auto;
+}
+
+.nav-icon {
+    height: 50px;
+    width: 50px;
+    float: left;
+    position: relative;
+    top: 15px;
+}
+
+.navigation-labels {
+    background-color: aliceblue;
+    text-decoration-line: underline;
+    display: inline;
+
+    position: relative;
+    top: 20px;
+}
+
+.nav-home, .nav-contents, .nav-about {
+    font-size: 24px;
+    
+}
+
+
