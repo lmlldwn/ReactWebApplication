@@ -12,42 +12,6 @@ body {
     align-items: center;
 }
 
-.square {
-    background-color: bisque;
-    height: 100px;
-    width: 100px;
-}
 
-.navigation-bar {
-    background-color: antiquewhite;
-    height: 80px;
-    position: relative;
-}
-
-img {
-    max-width: 100%;
-    max-height: auto;
-}
-
-.nav-icon {
-    height: 50px;
-    width: 50px;
-    float: left;
-    position: relative;
-    top: 15px;
-    left: 5px;
-}
-
-.navigation-labels {
-    display: inline;
-    position: relative;
-    top: 20px;
-    left: 10px;
-}
-
-.nav-home, .nav-contents, .nav-about {
-    text-decoration-line: underline;
-    font-size: 24px;
-}
 
 

@@ -1,0 +1,17 @@
+ul {
+    display: flex;
+    align-items: right;
+}
+
+li {
+    list-style-type: none;
+    display: block;
+    margin: 10px;
+}
+
+.navbar-container {
+    background-color: aliceblue;
+    text-align: right;
+    position: relative;
+}
+
