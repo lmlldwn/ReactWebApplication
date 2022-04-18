@@ -1,0 +1,103 @@
+button {
+  background-color: #32a878;
+  border-color: black;
+  border-radius: 8px;
+  border-width: 3px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Lucida Console";
+  font-size: 15px;
+  font-weight: 750;
+  line-height: 20px;
+  margin: 5px;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+}
+
+
+.home-contents {
+    background-color: lightblue;
+    align: center;
+    
+}
+
+.home-middle {
+    background-color: lightgreen;
+    align: center;
+    display: flex;
+
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+
+.home-image {
+    width: 300px;
+    height: 300px;
+    background-color: aliceblue;
+    margin: 5%;
+    padding: 10px;
+}
+
+.home-details {
+    background-color: lightred;
+    margin: 5%;
+}
+
+.home-title {
+    width: 500px;
+    height: 50px;
+    background-color: aliceblue;
+    border-color: black;
+    border-width: 3px;
+}
+
+.home-body {
+    background-color: aliceblue;
+    height: 71.43%;
+    width: 500px;
+}
+
+
+.home-buttons-container {
+    background-color: aliceblue;
+    border: 3px solid red;
+    border-radius: 25px;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 15px;
+    text-align: center;
+}
+
+.home-button {
+    display:inline-block;
+    line-height: 60px;
+    margin: 0 auto;
+    width: 75px;
+}
+
+.home-button:hover,
+.home-button:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+}
+
+$colors: (
+  home-button: #ffa260, 
+);
+
+button {
+    color: var(--color);
+    transition: 0.25s;
+}
+
+button:hover, button:focus {
+    border-color: var(--hover);
+    color: #fff;
+}
+
+.home-pagination {
+    align: center;
+}

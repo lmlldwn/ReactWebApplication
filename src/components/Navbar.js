@@ -6,13 +6,13 @@ function Navbar() {
     <>
       <div className="navbar-container">
         <ul className="navbar-items">
-          <li className="navbar-home">
+          <li className="navbar-home nav-link">
             <Link to="/">Home</Link>
           </li>
-          <li className="navbar-content">
+          <li className="navbar-content nav-link">
             <Link to="/content">Content</Link>
           </li>
-          <li className="navbar-about">
+          <li className="navbar-about nav-link">
             <Link to="/about">About</Link>
           </li>
         </ul>

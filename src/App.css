@@ -12,6 +12,10 @@ body {
     align-items: center;
 }
 
+.app {
+    background-image: url("./bin/Inazuma.jpg");
+}
+
 
 
 

@@ -1,16 +1,19 @@
 import './App.css';
-import Navbar from './components/Navbar';
+
 
 //import {useState} from 'react';
 import React from 'react';
 
 //external functions
+import Navbar from './components/Navbar';
 import About from "./components/About";
 import Content from "./components/Content";
 import Home from "./components/Home";
 
 //images
 //import icon from './bin/RimuruTempest.png';
+
+
 import { 
   BrowserRouter as Router,
   Route,
@@ -21,7 +24,7 @@ import {
 function App() {
 
   return (
-    <div>
+    <div className='app'>
       <Router>
         <Routes>
           <Route path="/" element={<Navbar />}>
