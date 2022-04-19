@@ -1,0 +1,82 @@
+.joke {
+    background-color: aliceblue;
+    height: 100px;
+    text-align: center;
+    padding: 2%;
+}
+
+#joke-setup{
+    font-family: Lucida;
+    font-size: 20px;
+    position: relative;
+    margin: 2%;
+    font-color: red;
+    text-align: center;
+}
+
+#joke-delivery {
+    font-family: Lucida;
+    font-size: 20px;
+    margin: 2%;
+    padding: 2%;
+}
+
+.joke-spinner {
+    background: transparent;
+    width: 100px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    animation: slide 8s;
+    horizontal-align: center;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+#joke-emoji1 {
+    font-size: 150%;
+    display: flex;
+    align-items: center;
+    animation: spin 1s linear 0s infinite;
+}
+
+#joke-emoji2 {
+    font-size: 150%;
+    display: flex;
+    align-items: center;
+    animation: spin 1s linear 0s infinite;
+}
+
+#joke-emoji3 {
+    font-size: 150%;
+    display: flex;
+    align-items: center;
+    animation: spin 1s linear 0s infinite;
+}
+
+#joke-button {
+    background-color: red;
+    display: inline-flex;
+    align-items: right;
+
+}
+
+@keyframes slide {
+    from{
+        transform: translateX(-100%)
+    }
+    to {
+        transform: translateX(100%)
+    }
+}
+@keyframes spin{
+    from {
+        transform: rotate(0);
+
+    }
+    to {
+        transform: rotate(359deg);
+        
+    }
+}
