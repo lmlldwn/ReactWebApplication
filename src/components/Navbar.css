@@ -8,8 +8,9 @@ li {
     display: block;
     margin: 10px;
     transition: 0.25s;
+    font-size: 24px;
 }
 
 .navbar-container {
-    background-color: aliceblue;
+    background-color: transparent;
 }

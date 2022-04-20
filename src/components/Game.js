@@ -14,73 +14,95 @@ function getRandomInt(max) {
 
 function Game() {
     const picks = ["rock", "paper", "scissors"];
-    const initialPlayerState ={
-        player1Pick: "rock",
-        player2Pick: "rock"
-    }
-    const initialWinner = {name: "Anonymous"}
-
-    const [playerState, setPlayerState] = useState(initialPlayerState);
+    const initialPlayer1State = null;
+    const initialPlayer2State = null;
+    const initialWinner = {name: "Anonymous"};
+    const [player1State, setPlayer1State] = useState(initialPlayer1State);
+    const [player2State, setPlayer2State] = useState(initialPlayer2State);
+    const [gameState, setGameState] = useState({hasEnded: false});
     const [winner, setWinner]= useState(initialWinner);
-
+    
     const setRock = () => {
-        setPlayerState({
-            player1Pick: "rock"});
+        setPlayer1State("rock");
+        setGameState({hasEnded: false});
     }
 
     const setPaper = () => {
-        setPlayerState({
-            player1Pick: "paper"});
+        setPlayer1State("paper");
+        setGameState({hasEnded: false});
     }
 
     const setScissors = () => {
-        setPlayerState({
-            player1Pick: "scissors"});
+        setPlayer1State("scissors");
+        setGameState({hasEnded: false});
     }
 
     const setRandom = () => {
-        setPlayerState({
-            player1Pick: picks[getRandomInt(3)]});
+        setPlayer1State(picks[getRandomInt(3)]);
+        setGameState({hasEnded: false});
     }
 
     const GeneratePlayer2Pick = () => {
-        
-        setPlayerState({
-            player1Pick: playerState.player1Pick,
-            player2Pick: picks[getRandomInt(3)]
-        });
-
-        
+        setPlayer2State(picks[getRandomInt(3)]);
     }
 
     const DetermineWinner = () => {
-        if (playerState.player1Pick === "paper" && playerState.player2Pick === "rock"){
-            setWinner({name:"Player1"})
-        } else if (playerState.player1Pick === "scissors" && playerState.player2Pick === "paper"){
-            setWinner({name:"Player1"})
-        } else if (playerState.player1Pick === "rock" && playerState.player2Pick === "scissors"){
-            setWinner({name:"Player1"})
-        } else if (playerState.player1Pick === "rock" && playerState.player2Pick === "paper"){
-            setWinner({name:"Bot"})
-        } else if (playerState.player1Pick === "paper" && playerState.player2Pick === "scissors"){
-            setWinner({name:"Bot"})
-        } else if (playerState.player1Pick === "scissors" && playerState.player2Pick === "rock"){
-            setWinner({name:"Bot"})
-        } else (
-            setWinner({
-                name: "It's a Tie!!!"
-            })
+        let winner;
+        if (player1State === "paper" && player2State === "rock"){
+            winner="Player1";
+        } else if (player1State === "scissors" && player2State === "paper"){
+            winner="Player1";
+        } else if (player1State === "rock" && player2State === "scissors"){
+            winner="Player1";
+        } else if (player1State === "rock" && player2State === "paper"){
+            winner="Bot";
+        } else if (player1State === "paper" && player2State === "scissors"){
+            winner="Bot";
+        } else if (player1State === "scissors" && player2State === "rock"){
+            winner="Bot";
+        } else {
+            winner="None";
+        }
+        setWinner({
+            name:winner,
+        })
+        setGameState({hasEnded:true});
+    }
+
+    useEffect(DetermineWinner, [player2State])
+
+    const Picking = () => {
+        return (
+            <div className='spinner-box'>
+                <div className='circle-box'>
+                    <div className='circle-core'>
+                        <div className='result'>
+                                Picking
+                        </div>
+                    </div>
+                </div>
+            </div>
         )
     }
 
-    useEffect( 
-        DetermineWinner
-    ,[playerState])
-
-    const ShowWinner = () => {
+    const DisplayMessage = () => {
         return (
-            <div className='result'>
-                Winner: {winner.name}
+            <div className='spinner-box'>
+                <div className='static-circle-box'>
+                    <div className='circle-core'>
+                        <div className='result'>
+                                { 
+                                    winner.name === "Player1" ? (
+                                        "You Win!"
+                                    ) : winner.name === "Bot" ? (
+                                        "You Lost!"
+                                    ) : (
+                                        "Draw!"
+                                    )
+                                }
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
@@ -97,7 +119,7 @@ function Game() {
                     ) : props.pick === "scissors" ? (
                         <img className='scissors' src={scissors} alt='not found'/>
                     ) : (
-                        <img src={what} alt='not found'/>
+                        <img className='unknown' src={what} alt='not found'/>
                     )
                 }
             </div>
@@ -106,12 +128,12 @@ function Game() {
 
     return(
         <div className='janken-game'>
-            <h1>Rock Paper Scissors</h1>
+            <h1 className='janken-header'>Rock Paper Scissors</h1>
             <div className='janken-game-contents'>
                 <div className='p1'>
                     <div className='p1-box'>
-                        Player1: {playerState.player1Pick}
-                        {/* <DisplayPick pick={playerState.player1Pick} /> */}
+                        Player1: {player1State}
+                        <DisplayPick pick={player1State} />
                     </div>
                     <div className='p1-buttons'>
                         <button onClick={setRock}>Rock</button>
@@ -122,13 +144,23 @@ function Game() {
                 </div>
                 <div className='p2'>
                     <div className='p2-box'>
-                        Bot: {playerState.player2Pick}
-                        {/* <DisplayPick pick={playerState.player2Pick} /> */}
+                        Bot: {player2State}
+                        <DisplayPick pick={player2State} />
                     </div>
                 </div>
-                <button onClick={GeneratePlayer2Pick}>Submit</button>
+                <div className='button-submit'>
+                    <button id='submit' onClick={GeneratePlayer2Pick}>Submit</button>
+                </div>
             </div>
-            <ShowWinner />
+            <div>
+                {
+                    !gameState.hasEnded ? (
+                        <Picking />
+                    ) : (
+                        <DisplayMessage />
+                    )
+                }
+            </div>
         </div>
     )
 }

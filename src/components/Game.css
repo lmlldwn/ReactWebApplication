@@ -1,46 +1,204 @@
-.janken-game-contents {
-    display: inline-block;
-    background: aliceblue;
-    height: 100%;
-    width: 100%;
-}
-.p1 {
-    background: green;
-    display: inline-flex;
-    margin: 5%;
-}
-.p1-box{
-    background-color: red;
-    height: 300px;
-    width: 300px;
-    text-align: center;
-    margin: 5%;
-    position: static;
-    left: 0px;
+.janken-game {
+    background: transparent;
+    position: relative;
 }
 
+.janken-header {
+    background: Transparent;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: white;
+
+    outline: 1px black;
+}
+
+.janken-game-contents {
+    background: transparent;
+    display: block;
+    position: relative;
+}
+
+.p1 {
+    background: transparent;
+    display: inline-block;
+    height: 400px;
+    width: 400px;
+
+    position: relative;
+    margin: 3%;
+    left: 5%;
+}
+
+.p1-box{
+    background: transparent;
+    display: block;
+
+    height: 62.5%;
+    width: 62.5%;
+    
+    margin: auto;
+    
+    text-align: center;
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 20px;
+    color: rgb(221, 219, 126);;
+
+}
+
+.p1-buttons {
+    background: transparent;
+    display: block;
+    position: absolute;
+    bottom: 3%;
+    left: 3%;
+
+}
+
+
 .p2 {
-    background: gold;
-    display: inline-flex;
-    margin: 5%;
+    background: transparent;
+    display: inline-block;
+    height: 400px;
+    width: 400px;
+
+    position: absolute;
+    margin: 3%;
+    right: 5%;
 }
 
 .p2-box {
-    background-color: red;
-    height: 300px;
-    width: 300px;
+    background: transparent;
+    display: block;
+
+    height: 62.5%;
+    width: 62.5%;
+    
+    margin: auto;
+    
     text-align: center;
-    margin: 5%;
-    position: static;
-    right: 0px;
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 20px;
+    color: black;
 }
 
-.rock .scissors .paper{
-    height: 10%;
+.button-submit {
+    background: transparent;
+    position:relative;
+    display: block;
+}
+
+#submit {
+    background: red;
+    position: relative;
+    left: 45%;
+
+    display: block;
     width: 10%;
-    margin: 5%;
+}
+
+.spinner-box{
+    background: transparent;
+    width: 300px;
+    height: 300px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+    position: absolute;
+    top: 30%;
+    left: 40%;
+}
+
+.circle-box {
+    width: 80%;
+    height: 80%;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    background: rgb(63,249,220);
+    background: linear-gradient(0deg, rgba(63,249,220,0.4) 30%, rgba(63,249,220,1) 100% );
+
+    animation: spin 10s linear 0s infinite; 
+    position: relative;
+    text-align: center;
+
+    margin:auto;
+    
+}
+
+.circle-core{
+    width: 100%;
+    height: 100%;
+    background: #1d2630;
+    border-radius: 50%;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(359deg);
+    }
 }
 
 .result {
-    background: #AAFBDC;
+    background: transparent;
+    display: inline;
+    position: relative;
+    top: 40%;
+    font-size: 40px;
+    color: white;
+}
+
+.rock{
+    width: 100%;
+    height: auto;
+}
+
+.paper{
+    width: 100%;
+    height: auto;
+}
+
+.scissors{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.unknown{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.static-circle-box {
+    width: 80%;
+    height: 80%;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    background: rgb(63,249,220);
+    background: linear-gradient(0deg, rgba(63,249,220,0.4) 30%, rgba(63,249,220,1) 100% );
+    position: relative;
+    text-align: center;
+    margin:auto;
 }
