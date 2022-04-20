@@ -13,7 +13,7 @@ body {
 }
 
 .app {
-    background-image: url("./bin/Inazuma.jpg");
+    background-image: url("../public/Inazuma.jpg");
 }
 
 

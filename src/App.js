@@ -7,7 +7,8 @@ import React from 'react';
 //external functions
 import Navbar from './components/Navbar';
 import About from "./components/About";
-import Content from "./components/Content";
+import Game from "./components/Game";
+import Joke from './components/Joke';
 import Home from "./components/Home";
 
 //images
@@ -21,6 +22,7 @@ import {
   Routes
 } from 'react-router-dom';
 
+
 function App() {
 
   return (
@@ -29,7 +31,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Navbar />}>
             <Route index element={<Home />} />
-            <Route path="content" element={<Content />} />
+            <Route path="game" element={<Game />} />
+            <Route path="joke" element={<Joke />} />
             <Route path="about" element={<About />} />
           </Route>
           <Route path="*" element={<Navigate to="/" replace />} />

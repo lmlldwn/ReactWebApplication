@@ -1,10 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
 
-import './Content.css'
+import './Joke.css'
 
 
-function Content() {
+function Joke() {
   const initialState = {items: [], isLoaded: false}
   const [state,setState] = useState(initialState);
 
@@ -47,4 +47,4 @@ function Content() {
   )
 }
 
-export default Content
+export default Joke

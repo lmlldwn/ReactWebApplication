@@ -46,10 +46,10 @@ function Home() {
 
       <div className='home-buttons-container'>
         <div className='home-button back'>
-          <button  onClick={ButtonClick}>Back</button>
+          <button  id='home-back' onClick={ButtonClick}>Back</button>
         </div>
         <div className='home-button next'>
-          <button  onClick={ButtonUnclick}>Next</button>
+          <button id='home-next' onClick={ButtonUnclick}>Next</button>
         </div>
       </div>
 

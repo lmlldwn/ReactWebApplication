@@ -1,0 +1,46 @@
+.janken-game-contents {
+    display: inline-block;
+    background: aliceblue;
+    height: 100%;
+    width: 100%;
+}
+.p1 {
+    background: green;
+    display: inline-flex;
+    margin: 5%;
+}
+.p1-box{
+    background-color: red;
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    margin: 5%;
+    position: static;
+    left: 0px;
+}
+
+.p2 {
+    background: gold;
+    display: inline-flex;
+    margin: 5%;
+}
+
+.p2-box {
+    background-color: red;
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    margin: 5%;
+    position: static;
+    right: 0px;
+}
+
+.rock .scissors .paper{
+    height: 10%;
+    width: 10%;
+    margin: 5%;
+}
+
+.result {
+    background: #AAFBDC;
+}
