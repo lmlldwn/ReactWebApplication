@@ -73,7 +73,7 @@ function Game() {
         setGameState({hasEnded:true});
     }
 
-    useEffect(DetermineWinner, [player2State])
+    useEffect(DetermineWinner, [player1State,player2State])
 
     const Picking = () => {
         return (
