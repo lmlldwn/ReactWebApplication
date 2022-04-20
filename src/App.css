@@ -16,6 +16,33 @@ body {
     background-image: url("../public/Inazuma.jpg");
 }
 
+button {
+    background-color: #32a878;
+    border-color: black;
+    border-radius: 8px;
+    border-width: 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Lucida Console";
+    font-size: 15px;
+    font-weight: 750;
+    line-height: 20px;
+    margin: 5px;
+    padding: 10px 12px;
+    text-align: center;
+    transition: all 200ms;
+  }
+
+button {
+    color: var(--color);
+    transition: 0.25s;
+}
+
+button:hover, button:focus {
+    border-color: var(--hover);
+    color: #fff;
+}
 
 
 

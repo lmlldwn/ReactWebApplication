@@ -1,6 +1,8 @@
 .janken-game {
     background: transparent;
     position: relative;
+    display: block;
+    height: 1000px;
 }
 
 .janken-header {
@@ -116,7 +118,7 @@
     margin: auto;
 
     position: absolute;
-    top: 30%;
+    top: 20%;
     left: 40%;
 }
 

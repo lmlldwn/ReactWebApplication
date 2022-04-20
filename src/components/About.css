@@ -1,0 +1,27 @@
+
+.about {
+    text-align: center;
+    margin: auto;
+    background: transparent;
+    display: block;
+    height: 800px;
+    width: auto;
+}
+
+#name {
+    color: black;
+    font-size: 30px;
+}
+
+.contacts{
+    color: black;
+    background: aliceblue;
+    background: linear-gradient(0deg, rgba(240,248,255,0.4) 28%, rgba(240,248,255,1) 90% );
+    display: inline-block;
+    font-size: 20px;
+    width: 50%;
+    height: auto;
+    padding: 2%;
+}
+
+

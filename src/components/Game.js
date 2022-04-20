@@ -21,25 +21,31 @@ function Game() {
     const [player2State, setPlayer2State] = useState(initialPlayer2State);
     const [gameState, setGameState] = useState({hasEnded: false});
     const [winner, setWinner]= useState(initialWinner);
+
+
+    const ResetState = () => {
+        setPlayer2State(null);
+        setGameState({hasEnded: false});
+    }
     
     const setRock = () => {
         setPlayer1State("rock");
-        setGameState({hasEnded: false});
+        ResetState();
     }
 
     const setPaper = () => {
         setPlayer1State("paper");
-        setGameState({hasEnded: false});
+        ResetState();
     }
 
     const setScissors = () => {
         setPlayer1State("scissors");
-        setGameState({hasEnded: false});
+        ResetState();
     }
 
     const setRandom = () => {
         setPlayer1State(picks[getRandomInt(3)]);
-        setGameState({hasEnded: false});
+        ResetState();
     }
 
     const GeneratePlayer2Pick = () => {
@@ -63,9 +69,7 @@ function Game() {
         } else {
             winner="None";
         }
-        setWinner({
-            name:winner,
-        })
+        setWinner({name:winner});
         setGameState({hasEnded:true});
     }
 

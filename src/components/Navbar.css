@@ -1,6 +1,7 @@
 ul {
     display: flex;
     align-items: right;
+    background: linear-gradient(0deg, rgba(240,248,255,0.3) 30%, rgba(230,245,250,1) 90% );
 }
 
 li {

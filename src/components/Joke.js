@@ -26,14 +26,14 @@ function Joke() {
           <label id='joke-delivery'>{state.items.delivery}</label> <br/>
           <div className='joke-spinner'>
             <label id='joke-emoji1'>🤣</label>
-            <label id='joke-emoji2'>🤣</label>
-            <label id='joke-emoji3'>🤣</label>
+            <label id='joke-emoji1'>🤣</label>
+            <label id='joke-emoji1'>🤣</label>
           </div>
         </div>
     )
   }
   return (
-    <div>
+    <div className='joke-container'>
       <h1>Random Joke</h1>
       {
         !state.isLoaded ? (
@@ -42,7 +42,9 @@ function Joke() {
           <DisplayJoke />
         )
       }
-      <button id='button-joke' onClick={getJoke}>Generate joke</button>
+      <div className='joke-generate'>
+        <button id='button-joke' onClick={getJoke}>Generate joke</button>
+      </div>
     </div>
   )
 }

@@ -6,11 +6,8 @@ function Navbar() {
     <>
       <div className="navbar-container">
         <ul className="navbar-items">
-          <li className="navbar-home nav-link">
-            <Link to="/">Home</Link>
-          </li>
           <li className="navbar-joke nav-link">
-            <Link to="/game">Game</Link>
+            <Link to="/">Game</Link>
           </li>
           <li className="navbar-joke nav-link">
             <Link to="/joke">Joke</Link>

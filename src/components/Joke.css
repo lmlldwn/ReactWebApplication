@@ -1,3 +1,11 @@
+.joke-container{
+    display: block;
+    position: relative;
+    height: 1000px;
+    align-items: center;
+
+}
+
 .joke {
     background-color: aliceblue;
     height: 100px;
@@ -39,25 +47,21 @@
     animation: spin 1s linear 0s infinite;
 }
 
-#joke-emoji2 {
-    font-size: 150%;
-    display: flex;
-    align-items: center;
-    animation: spin 1s linear 0s infinite;
-}
-
-#joke-emoji3 {
-    font-size: 150%;
-    display: flex;
-    align-items: center;
-    animation: spin 1s linear 0s infinite;
-}
-
-#joke-button {
-    background-color: red;
+#button-joke {
+    background-color: pink;
     display: inline-flex;
-    align-items: right;
+    position: absolute;
+    width: 50%;
+    height: auto;
+    padding: 2%;
+    justify-content: center;
+}
 
+.joke-generate {
+    display: block;
+    width: auto;
+    position: relative;
+    left: 25%
 }
 
 @keyframes slide {

@@ -1,24 +1,23 @@
 import React from 'react'
-
+import './About.css'
 
 function DisplayAbout() {
   const author = {
     name: "Lemuel Aldwin Garcia",
     email: "lemuelaldwingarcia@gmail.com",
     github: "www",
-    linkedin: "www"
+    linkedin: "https://www.linkedin.com/in/lemuelaldwin/"
   }
   return(
-    <div>
-      <div className='author'>
-        <label>Author: {author.name}</label>
-      </div>
+    <div className='about'>
+      
       <div className='contacts'>
-        <ul>
-          <li>Email: {author.email}</li>
-          <li>GitHub: {author.github}</li>
-          <li>LinkedIn: {author.linkedin}</li>
-        </ul>
+        <div className='author'>
+          <h2 id='name'>{author.name}</h2>
+        </div>
+          <div className='author-email'>Email: {author.email} </div>
+          <div className='author-github'>GitHub: <a href='https://github.com/lmlldwn'>lmlldwn</a> </div>
+          <div className='author-linkedin'>LinkedIn: <a href='https://www.linkedin.com/in/lemuelaldwin/'>Lemuel Aldwin Garcia</a></div>
       </div>
     </div>
   )
@@ -27,7 +26,7 @@ function DisplayAbout() {
 function About() {
   return (
     <div>
-      <h1>About</h1>
+      <h1>About Author: </h1>
       <DisplayAbout />
     </div>
   )
