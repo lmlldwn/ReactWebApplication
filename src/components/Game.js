@@ -54,26 +54,37 @@ function Game() {
 
     const DetermineWinner = () => {
         let winner;
+        let gameEnded=false;
         if (player1State === "paper" && player2State === "rock"){
             winner="Player1";
+            gameEnded = true;
         } else if (player1State === "scissors" && player2State === "paper"){
             winner="Player1";
+            gameEnded = true;
         } else if (player1State === "rock" && player2State === "scissors"){
             winner="Player1";
+            gameEnded = true;
         } else if (player1State === "rock" && player2State === "paper"){
             winner="Bot";
+            gameEnded = true;
         } else if (player1State === "paper" && player2State === "scissors"){
             winner="Bot";
+            gameEnded = true;
         } else if (player1State === "scissors" && player2State === "rock"){
             winner="Bot";
+            gameEnded = true;
+        } else if (player1State === player2State){
+            winner="None";
+            gameEnded = true;
         } else {
             winner="None";
+            gameEnded = false;
         }
         setWinner({name:winner});
-        setGameState({hasEnded:true});
+        setGameState({hasEnded:gameEnded});
     }
 
-    useEffect(DetermineWinner, [player1State,player2State])
+    useEffect(DetermineWinner, [player1State, player2State])
 
     const Picking = () => {
         return (
@@ -110,7 +121,6 @@ function Game() {
             </div>
         )
     }
-
 
     const DisplayPick = (props) => {
         return(
